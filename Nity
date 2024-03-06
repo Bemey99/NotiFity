@@ -26,7 +26,7 @@ local function Round2px()
     local NewImage = Image("http://www.roblox.com/asset/?id=5761488251")
     NewImage.ScaleType = Enum.ScaleType.Slice
     NewImage.SliceCenter = Rect.new(2, 2, 298, 298)
-    NewImage.ImageColor3 = Color3.fromRGB(255, 182, 193)  -- Reddish-pink color
+    NewImage.ImageColor3 = Color3.fromRGB(255, 0, 0)  -- Bright red color
     return NewImage
 end
 
@@ -116,8 +116,11 @@ local function TitleLabel(Text)
 end
 
 local function DescriptionLabel(Text)
-    return Label(Text, DescriptionSettings.Font, DescriptionSettings.Size)
+    local Label = Label(Text, DescriptionSettings.Font, DescriptionSettings.Size)
+    Label.TextColor3 = Color3.new(1, 1, 1)  -- White text color
+    return Label
 end
+
 
 local PropertyTweenOut = {
     Text = "TextTransparency",
